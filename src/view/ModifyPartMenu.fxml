@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartMenuController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="52.0" layoutY="33.0" text="Modify Part" />
+            <Label layoutX="52.0" layoutY="98.0" text="ID" />
+            <Label layoutX="52.0" layoutY="134.0" text="Name" />
+            <Label layoutX="52.0" layoutY="164.0" text="Inv" />
+            <Label layoutX="52.0" layoutY="200.0" text="Price/Cost" />
+            <Label layoutX="52.0" layoutY="233.0" text="Max" />
+            <Label fx:id="machineIdCompanyLbl" layoutX="52.0" layoutY="263.0" text="Machine ID" />
+            <TextField fx:id="partIDTxt" layoutX="143.0" layoutY="94.0" />
+            <TextField fx:id="partNameTxt" layoutX="143.0" layoutY="130.0" />
+            <TextField fx:id="partInvTxt" layoutX="143.0" layoutY="160.0" />
+            <TextField fx:id="partCostTxt" layoutX="143.0" layoutY="196.0" />
+            <TextField fx:id="partMaxTxt" layoutX="143.0" layoutY="229.0" />
+            <TextField fx:id="partMachineIDTxt" layoutX="143.0" layoutY="259.0" />
+            <Label layoutX="326.0" layoutY="233.0" text="Min" />
+            <TextField fx:id="partMinTxt" layoutX="374.0" layoutY="229.0" />
+            <RadioButton fx:id="inHouseRbtn" layoutX="148.0" layoutY="33.0" mnemonicParsing="false" onAction="#OnActionSetInHouseRbtn" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="inHouseOutsourcedTG" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="outSourcedRbtn" layoutX="257.0" layoutY="33.0" mnemonicParsing="false" onAction="#OnActionSetOutsourcedRbtn" text="Outsourced" toggleGroup="$inHouseOutsourcedTG" />
+            <Button layoutX="367.0" layoutY="327.0" mnemonicParsing="false" onAction="#OnActionSaveModifyPart" text="Save" />
+            <Button layoutX="441.0" layoutY="327.0" mnemonicParsing="false" onAction="#OnActionMainMenu" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
